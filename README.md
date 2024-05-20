@@ -15,14 +15,14 @@ git clone https://github.com/prato/I-m-hungry.git
 2. **Install dependencies:**
 
 ```bash
-cd food-truck-finder
+cd I-m-hungry
 cpanm URI LWP::UserAgent JSON
 ```
 
 3. **Run the script:**
 
 ```bash
-perl food_truck_finder.pl
+perl im_hungry.pl
 ```
 
 4. **Enter the type of food you're looking for:**
@@ -36,21 +36,25 @@ The script will print a list of food trucks that serve the specified food, along
 ## Example Usage
 
 ```
-Enter the type of food you're looking for: tacos
+For what sort of food are you looking?
+tacos
+Very well, I shall find you TACOS!
 
-## Tacos
+Food Truck Fleet Contacted Successfully...
+
+As requested, you may acquire TACOS at the following locations:
 
 **El Tonayense**
 * Location: 24th St & Mission St
-* Food items: Tacos, burritos, quesadillas
-* Hours of operation: Mon-Fri 11am-8pm, Sat-Sun 10am-7pm
+* Serving: Tacos, burritos, quesadillas
+* Hours: 11:00 - 21:00
 
 **La Taqueria**
 * Location: 29th St & Mission St
-* Food items: Tacos, burritos, quesadillas
-* Hours of operation: Mon-Fri 10am-9pm, Sat-Sun 9am-8pm
+* Serving: Tacos, burritos, quesadillas
+* Hours: 10:00 - 21:00
 
 **Taqueria Cancun**
 * Location: 16th St & Mission St
-* Food items: Tacos, burritos, quesadillas
-* Hours of operation: Mon-Fri 11am-7pm, Sat-Sun 10am-6pm
+* Serving: Tacos, burritos, quesadillas
+* Hours: 11:00 - 19:00

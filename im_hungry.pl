@@ -43,7 +43,7 @@ my $res = $ua->get($req);
 # If unsuccessful, print an error message and exit.
 my @permits;
 if ($res->is_success) {
-    print "Food Truck Fleet Contacted Successfully\n";
+    print "Food Truck Fleet Contacted Successfully...\n";
     @permits = @{ decode_json($res->decoded_content) };
 } else {
     die "Failed to fetch content from the URL: " . $res->status_line;
@@ -99,10 +99,10 @@ print "\n******** As requested, you may acquire $food at the following locations
 # Iterate through the %trucks hash and lightly format the data for the perspective diner.
 # If blank fields are encountered, the blank string abides. 
 foreach my $key (keys %trucks) {
-    print "Name: " . ($trucks{$key}->{applicant} // '') . "\n";
-    print "Located at: " . ($trucks{$key}->{location} // '') . "\n";
-    print "Serving: " . ($trucks{$key}->{fooditems} // '') . "\n";
-    print "Hours: " . ($trucks{$key}->{start24} // '') . " - " . ($trucks{$key}->{end24} // '') . "\n\n";
+    print "**" . ($trucks{$key}->{applicant} // '') . "**\n";
+    print "* Location: " . ($trucks{$key}->{location} // '') . "\n";
+    print "* Serving: " . ($trucks{$key}->{fooditems} // '') . "\n";
+    print "* Hours: " . ($trucks{$key}->{start24} // '') . " - " . ($trucks{$key}->{end24} // '') . "\n\n";
 }
 
 1;
